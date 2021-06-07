@@ -2,6 +2,7 @@ import Foundation
 
 final class CallStation {
     var usersList = [User]()
+    var callsList = [Call]()
 }
 
 extension CallStation: Station {
