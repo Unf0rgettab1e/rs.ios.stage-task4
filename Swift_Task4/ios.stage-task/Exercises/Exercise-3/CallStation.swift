@@ -1,14 +1,18 @@
 import Foundation
 
-final class CallStation { }
+final class CallStation {
+    var usersList = [User]()
+}
 
 extension CallStation: Station {
     func users() -> [User] {
-        []
+        return usersList
     }
     
     func add(user: User) {
-
+        if !usersList.contains(user) {
+            usersList.append(user)
+        }
     }
     
     func remove(user: User) {
